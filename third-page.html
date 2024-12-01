@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - Parte 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('nos2.png') no-repeat center center fixed; /* Use a imagem que desejar */
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .story-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            color: white;
+        }
+
+        .story-container h1 {
+            margin-bottom: 15px;
+        }
+
+        .story-container p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .story-container button {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .story-container button:hover {
+            background-color: #e03570;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <h1>Nossa História (page 2)</h1>
+        <p>
+            A primeira vez que nós saímos juntos, só nós dois, foi quando fomos no cinema ver Elementos, eu lembro até hoje de você chorando e eu te dando um abraço bem longo, esse dia foi muito especial e vai ficar marcado na minha vida e 
+        na nossa história pra sempre, desde então tivemos muitos momentos, fases boas, fases ruins, fases que nem eu e nem você sabiamos se a gente ia conseguir passar delas, mas hoje estamos aqui, fortes, e eu quero que seja assim pra 
+        sempre, você é a minha maior certeza, e eu quero que a gente passe dessa fase juntos, quero que a gente faça questão de mudar nossas atitudes um pelo outro, que a gente não hesite em tirar pessoas das nossas vidas um pelo outro.
+            ❤️
+        </p>
+        <button onclick="fadeToNextPage()">Próxima Página</button>
+    </div>
+
+    <script>
+        function fadeToNextPage() {
+            document.body.style.animation = "fadeOut 1s ease-out";
+            setTimeout(() => {
+                window.location.href = "fourth-page.html"; // Caminho para a próxima página.
+            }, 1000); // Tempo da animação (1 segundo).
+        }
+    </script>
+</body>
+</html>
