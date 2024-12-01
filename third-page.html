@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - Parte 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('nos2.png') no-repeat center center fixed; /* Use a imagem que desejar */
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .story-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            color: white;
+        }
+
+        .story-container h1 {
+            margin-bottom: 15px;
+        }
+
+        .story-container p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .story-container button {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .story-container button:hover {
+            background-color: #e03570;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <h1>Nossa História (page 2)</h1>
+        <p>
+            Saímos pra "comprar pão" e ficamos conversando, ficamos de bobeira caminhando, brincando, rindo, foi muito especial pra mim.
+            Você tava toda envergonhada, ficou com vergonha de chegar perto de mim, eu dei a ideia de tirar uma foto juntos, mas você ficava se afastando de mim por
+        vergonha, naquele momento percebi que já tava apaixonado e que não tinha mais volta, te dei um selinho na escada na hora de eu ir embora e foi mágico, você sempre foi tão doce e meiga.
+            Eu fui na sua casa no outro fim de semana e vimos Barraca do Beijo, e ali demos nossos primeiros selinhos sem ser de despedida, você toda envergonhada como sempre kkk. 
+        </p>
+        <button onclick="fadeToNextPage()">Próxima Página</button>
+    </div>
+
+    <script>
+        function fadeToNextPage() {
+            document.body.style.animation = "fadeOut 1s ease-out";
+            setTimeout(() => {
+                window.location.href = "fourth-page.html"; // Caminho para a próxima página.
+            }, 1000); // Tempo da animação (1 segundo).
+        }
+    </script>
+</body>
+</html>

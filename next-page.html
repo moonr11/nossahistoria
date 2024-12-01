@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História - Parte 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('nos.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        .story-container {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            color: white;
+        }
+
+        .story-container h1 {
+            margin-bottom: 15px;
+        }
+
+        .story-container p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .story-container button {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .story-container button:hover {
+            background-color: #e03570;
+        }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <h1>Nossa História (page 1)</h1>
+        <p>
+            Começamos a conversar no dia 16/03/2023. Por algum acaso você tava no Instagram do Gabriel e eu pedi o seu @ pra ele, a primeira mensagem que te mandei foi um áudio com aquela música "A pia ta cheia de louça..." e 
+        incrivelmente você não achou ruim, você me zoou de volta e começamos a conversar, tinhamos tantas brincadeiras juntos, eu te chamava de macaquinha e você me chamava de macaquinho, era incrível.
+            Nós conversavamos todos os dias como se estivessemos namorando já, mas não tinhamos nos assumido ainda, até que você me chamou pra ir na sua casa no domingo dia 02 de abril de 2023. Eu cheguei na sua casa e tava todo mundo lá, 
+        sua avó, seu avô, sua mãe e seus irmãos, eu tava tão envergonhado que até derrubei um vaso de planta da sua avó (Eu quase me enfiei em um buraco naquela hora KKK).
+        </p>
+        <button onclick="fadeToNextPage()">Próxima Página</button>
+    </div>
+
+    <script>
+        function fadeToNextPage() {
+            document.body.style.animation = "fadeOut 1s ease-out";
+            setTimeout(() => {
+                window.location.href = "third-page.html"; // Caminho da próxima página.
+            }, 1000); // Tempo da animação (1 segundo).
+        }
+    </script>
+</body>
+</html>
